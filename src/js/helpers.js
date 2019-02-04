@@ -8,7 +8,6 @@ const defaultTubbie = {
 export const updateStorage = tubbie => {
   let tubbies = JSON.parse(window.localStorage.getItem('teletubbies'));
   tubbies[tubbie.value] += 1;
-  console.log(tubbie);
   window.localStorage.setItem('teletubbies', JSON.stringify(tubbies));
 };
 
