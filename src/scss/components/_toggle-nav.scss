@@ -1,0 +1,13 @@
+.toggle-nav {
+  background-color: color(siletto);
+  color: color(white);
+  width: 30px;
+  display: block;
+  padding: 11px 11px 11px 20px;
+  transform: skewX(-25deg);
+  transform-origin: top left;
+
+  &__icon {
+    transform: skewX(25deg);
+  }
+}

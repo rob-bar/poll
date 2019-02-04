@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// Imports
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/classes";
+
+// Base Styles
+@import "base";
+
+// Components Styles
+@import "components/header";
+@import "components/logo";
+@import "components/toggle-nav";
+@import "components/main-navigation";
+@import "components/poll";
+@import "components/footer";
+@import "components/results-link";
+@import "components/container";
+@import "components/button";
+@import "components/submit-button";

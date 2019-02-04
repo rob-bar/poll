@@ -1,0 +1,19 @@
+.container {
+  max-width: 768px;
+  padding: 2rem;
+
+  &--footer {
+    padding: 1rem 2rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    margin: 0 auto;
+  }
+
+  // when I do this 50% width and alignment on the right
+  // on the 600px above breakpoint ther layout does not feel ok
+  @media screen and (min-width: 1140px) {
+    margin: 0 0 0 auto;
+    width: 50%;
+  }
+}

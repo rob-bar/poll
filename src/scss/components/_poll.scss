@@ -1,0 +1,18 @@
+
+.poll {
+  &__item {
+    display: block;
+    margin-bottom: 1.4rem;
+
+    &__radio {
+      margin-right: 10px;
+    }
+  }
+
+  &__result {
+    margin-bottom: 1.2rem;
+    color: color(boston);
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}

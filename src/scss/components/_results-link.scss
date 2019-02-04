@@ -1,0 +1,12 @@
+.results-link {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  color: color(boston);
+  font-size: 1.2rem;
+
+  &__icon {
+    color: color(black);
+    margin-left: 5px;
+  }
+}

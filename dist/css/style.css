@@ -1,0 +1,126 @@
+.flex {
+  display: flex; }
+
+.ai-c {
+  align-items: center; }
+
+.jc-sb {
+  justify-content: space-between; }
+
+html {
+  box-sizing: border-box; }
+
+* ::before,
+* ::after {
+  box-sizing: inherit; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: "Arial", helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #F6F6F6;
+  padding-top: 40px; }
+
+h1 {
+  font-size: 2rem; }
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #C12B22;
+  display: flex;
+  align-items: stretch; }
+
+.logo {
+  color: #FFF;
+  font-size: 1rem;
+  margin-left: 10px;
+  text-transform: uppercase; }
+
+.toggle-nav {
+  background-color: #9A2C31;
+  color: #FFF;
+  width: 30px;
+  display: block;
+  padding: 11px 11px 11px 20px;
+  transform: skewX(-25deg);
+  transform-origin: top left; }
+  .toggle-nav__icon {
+    transform: skewX(25deg); }
+
+.main-navigation {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 40px;
+  width: 100%;
+  background-color: #FFF; }
+
+.poll__item {
+  display: block;
+  margin-bottom: 1.4rem; }
+  .poll__item__radio {
+    margin-right: 10px; }
+
+.poll__result {
+  margin-bottom: 1.2rem;
+  color: #3685B9;
+  font-size: 1.1rem;
+  font-weight: bold; }
+
+.footer {
+  background-color: #FFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
+.results-link {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3685B9;
+  font-size: 1.2rem; }
+  .results-link__icon {
+    color: #000;
+    margin-left: 5px; }
+
+.container {
+  max-width: 768px;
+  padding: 2rem; }
+  .container--footer {
+    padding: 1rem 2rem; }
+  @media screen and (min-width: 600px) {
+    .container {
+      margin: 0 auto; } }
+  @media screen and (min-width: 1140px) {
+    .container {
+      margin: 0 0 0 auto;
+      width: 50%; } }
+
+.button {
+  background-color: #C12B22;
+  border: 0;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.5); }
+  .button:hover {
+    background-color: #dc433a;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.3); }
+  .button--disabled {
+    background-color: #777777; }
+    .button--disabled:hover {
+      background-color: #777777;
+      box-shadow: inset 0 -3px rgba(0, 0, 0, 0.5); }
+
+.submit-button {
+  display: block; }

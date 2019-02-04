@@ -1,0 +1,24 @@
+.button {
+  background-color: color(thunderbird);
+  border: 0;
+  color: color(white);
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: inset 0 -3px rgba(#000, .5);
+
+  &:hover {
+    background-color: lighten(color(thunderbird), 10%);
+    box-shadow: inset 0 -1px rgba(#000, .3);
+  }
+
+  &--disabled {
+    background-color: color(boulder);
+
+    &:hover {
+      background-color: color(boulder);
+      box-shadow: inset 0 -3px rgba(#000, .5);
+    }
+  }
+}
