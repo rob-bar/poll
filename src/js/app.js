@@ -30,7 +30,6 @@ window.addEventListener('load', function() {
     const submitForm = (e) => {
       const checkedRadio = getCheckedRadio();
       updateStorage(checkedRadio);
-      console.log(checkedRadio);
       window.location.href = '/results.html';
     }
 
@@ -53,6 +52,5 @@ window.addEventListener('load', function() {
     document.querySelector("[data-tubbie='dipsy'] .poll__result__amount").innerHTML = tubbies['dipsy'];
     document.querySelector("[data-tubbie='laa-laa'] .poll__result__amount").innerHTML = tubbies['laa-laa'];
     document.querySelector("[data-tubbie='po'] .poll__result__amount").innerHTML = tubbies['po'];
-    console.log();
   }
 })
