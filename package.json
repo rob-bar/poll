@@ -8,7 +8,7 @@
     "compile": "npm-run-all compile:sass compile:webpack",
     "deliver:watch": "onchange 'src/**/*' -- npm run compile",
     "deliver:serve": "browser-sync start --server '.' --files '.'",
-    "demo": "npm-run-all --parallel deliver:**"
+    "start": "npm-run-all --parallel deliver:**"
   },
   "keywords": [
     "Html",
