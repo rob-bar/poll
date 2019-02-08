@@ -2,7 +2,6 @@
   "name": "persgroep",
   "version": "1.0.0",
   "description": "Opdracht persgroep",
-  "main": "index.js",
   "scripts": {
     "compile:sass": "npx node-sass src/scss/style.scss dist/css/style.css",
     "compile:webpack": "npx webpack src/js/app.js -o dist/js/app.js --mode=development",
