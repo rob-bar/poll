@@ -1,47 +1,56 @@
-const defaultTubbie = {
+const defaultTubbies = {
   "tinky-winky": 0,
   "dipsy": 0,
   "laa-laa": 0,
   "po": 0
 }
 
-export const updateStorage = tubbie => {
-  let tubbies = JSON.parse(window.localStorage.getItem('teletubbies'));
-  tubbies[tubbie.value] += 1;
-  window.localStorage.setItem('teletubbies', JSON.stringify(tubbies));
-};
-
-export const getStorage = () => {
-  return window.localStorage.getItem('teletubbies');
+// state functions //
+// ===================== //
+export const updateStorage = tubbieName => {
+  let tubbies = getTubbies();
+  tubbies[tubbieName] += 1;
+  setTubbies(tubbies);
 };
 
 export const setDefaults = () => {
-  window.localStorage.setItem('teletubbies', JSON.stringify(defaultTubbie));
+  setTubbies(defaultTubbies);
+};
+
+// window functions //
+// ===================== //
+export const getTubbies = () => {
+  return JSON.parse(window.localStorage.getItem(`teletubbies`));
+};
+
+export const setTubbies = (tubbies) => {
+  window.localStorage.setItem(`teletubbies`, JSON.stringify(tubbies));
 };
 
 export const getPagePath = () => {
   return window.location.pathname;
 };
 
-export const disableButton = () => {
-  const button = document.querySelector('.footer .button');
-  button.classList.add('button--disabled');
-  button.setAttribute('disabled', true);
-};
-
-export const enableButton = () => {
-  const button = document.querySelector('.footer .button');
-  button.classList.remove('button--disabled');
-  button.removeAttribute('disabled');
+// helper functions //
+// ===================== //
+export const enableButton = (isOff) => {
+  const button = document.querySelector(`.footer .button`);
+  const disabled = `disabled`;
+  if (isOff) {
+    button.classList.remove(`button--${disabled}`);
+    button.removeAttribute(disabled);
+  } else {
+    button.classList.add(`button--${disabled}`);
+    button.setAttribute(disabled, true);
+  }
 };
 
 export const getCheckedRadio = () => {
-  let foundRadio = null;
-  const radios = document.getElementsByName('poll');
-  radios.forEach((radio, i) => {
-    if (radio.checked) {
-      foundRadio = { name: radio.name, value: radio.value.toLowerCase().replace(" ", "-") };
-    }
-  });
-  return foundRadio;
+  const radios = [...document.getElementsByName(`poll`)];
+  let foundRadio = radios.filter((radio, i) => radio.checked);
+  if(foundRadio[0]) {
+    return foundRadio[0].value.toLowerCase().replace(" ", "-");
+  } else {
+    throw "No Selected item found! Something went wrong.";
+  }
 };
