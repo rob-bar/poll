@@ -3,7 +3,6 @@
 // Imports
 @import "utils/variables";
 @import "utils/functions";
-@import "utils/classes";
 
 // Base Styles
 @import "base";
@@ -19,3 +18,6 @@
 @import "components/container";
 @import "components/button";
 @import "components/submit-button";
+
+// Trumps
+@import "utils/classes";
